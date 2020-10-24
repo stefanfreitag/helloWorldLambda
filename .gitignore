@@ -41,6 +41,8 @@ jspm_packages/
 cdk.out/
 .cdk.staging/
 .parcel-cache/
+cdk.context.json
+yarn-error.log
 !/package.json
 !/.npmignore
 !/LICENSE
