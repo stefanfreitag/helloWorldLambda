@@ -22,7 +22,6 @@ const project = new AwsCdkTypeScriptApp({
     "@aws-cdk/aws-lambda",
     "@aws-cdk/core",
   ],
-  re
 });
 
 
