@@ -34,7 +34,7 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.26.1",
     "@typescript-eslint/parser": "^4.26.1",
-    "aws-cdk": "1.107.0",
+    "aws-cdk": "1.110.1",
     "eslint": "^7.28.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -43,17 +43,17 @@
     "jest-junit": "^12",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
-    "projen": "^0.22.8",
+    "projen": "^0.22.15",
     "ts-jest": "^26.5.6",
     "ts-node": "^9",
     "typescript": "^3.9.9"
   },
   "dependencies": {
-    "@aws-cdk/assert": "1.107.0",
-    "@aws-cdk/aws-apigateway": "1.107.0",
-    "@aws-cdk/aws-ec2": "1.107.0",
-    "@aws-cdk/aws-lambda": "1.107.0",
-    "@aws-cdk/core": "1.107.0"
+    "@aws-cdk/assert": "1.110.1",
+    "@aws-cdk/aws-apigateway": "1.110.1",
+    "@aws-cdk/aws-ec2": "1.110.1",
+    "@aws-cdk/aws-lambda": "1.110.1",
+    "@aws-cdk/core": "1.110.1"
   },
   "bundledDependencies": [],
   "keywords": [
