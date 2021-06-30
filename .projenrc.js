@@ -3,7 +3,7 @@ const { AwsCdkTypeScriptApp, DependabotScheduleInterval, Stability } = require('
 const project = new AwsCdkTypeScriptApp({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan@stefreitag.de',
-  cdkVersion: '1.107.0',
+  cdkVersion: '1.110.1',
   name: 'hello-world-lambda',
   description: 'A simple Hello World application using an AWS API Gateway and Lambda function.',
   repository: 'https://github.com/stefanfreitag/helloWorldLambda.git',
