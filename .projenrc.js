@@ -2,8 +2,8 @@ const { AwsCdkTypeScriptApp, DependabotScheduleInterval, Stability } = require('
 
 const project = new AwsCdkTypeScriptApp({
   authorName: 'Stefan Freitag',
-  authorEmail: 'stefan@stefreitag.de',
-  cdkVersion: '1.110.1',
+  authorEmail: 'stefan.freitag@udo.edu',
+  cdkVersion: '1.122.0',
   name: 'hello-world-lambda',
   description: 'A simple Hello World application using an AWS API Gateway and Lambda function.',
   repository: 'https://github.com/stefanfreitag/helloWorldLambda.git',
@@ -22,6 +22,8 @@ const project = new AwsCdkTypeScriptApp({
     '@aws-cdk/aws-lambda',
     '@aws-cdk/core',
   ],
+  cdkTestDependencies: ['@aws-cdk/assert'],
+
 });
 
 
