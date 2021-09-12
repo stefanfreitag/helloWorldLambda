@@ -29,15 +29,15 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/jest": "^26.0.23",
+    "@types/jest": "^26.0.24",
     "@types/node": "^10.17.0",
-    "@typescript-eslint/eslint-plugin": "^4.26.1",
-    "@typescript-eslint/parser": "^4.26.1",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
     "aws-cdk": "1.122.0",
-    "eslint": "^7.28.0",
-    "eslint-import-resolver-node": "^0.3.4",
+    "eslint": "^7.32.0",
+    "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.2",
     "jest": "^26.6.3",
     "jest-junit": "^12",
     "json-schema": "^0.3.0",
@@ -45,7 +45,7 @@
     "projen": "^0.27.51",
     "ts-jest": "^26.5.6",
     "ts-node": "^9",
-    "typescript": "^3.9.9"
+    "typescript": "^3.9.10"
   },
   "dependencies": {
     "@aws-cdk/assert": "1.122.0",
