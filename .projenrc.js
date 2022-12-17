@@ -1,9 +1,10 @@
-const { AwsCdkTypeScriptApp, DependabotScheduleInterval, Stability } = require('projen');
+const { awscdk } = require('projen');
+const { Stability } = require('projen/lib/cdk');
 
-const project = new AwsCdkTypeScriptApp({
+const project = new awscdk.AwsCdkTypeScriptApp({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan.freitag@udo.edu',
-  cdkVersion: '1.122.0',
+  cdkVersion: '2.55.0',
   name: 'hello-world-lambda',
   description: 'A simple Hello World application using an AWS API Gateway and Lambda function.',
   repository: 'https://github.com/stefanfreitag/helloWorldLambda.git',
@@ -16,18 +17,10 @@ const project = new AwsCdkTypeScriptApp({
   cdkVersionPinning: true,
   copyrightPeriod: 2020,
   copyrightOwner: 'Stefan Freitag',
-  cdkDependencies: [
-    '@aws-cdk/aws-apigateway',
-    '@aws-cdk/aws-ec2',
-    '@aws-cdk/aws-lambda',
-    '@aws-cdk/core',
-  ],
-  cdkTestDependencies: ['@aws-cdk/assert'],
-
 });
 
 
-const common_exclude = ['cdk.context.json', 'yarn-error.log'];
+const common_exclude = ['cdk.context.json', 'yarn-error.log', '.history'];
 project.npmignore.exclude(...common_exclude);
 project.gitignore.exclude(...common_exclude);
 

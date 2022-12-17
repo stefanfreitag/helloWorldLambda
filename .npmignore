@@ -3,8 +3,10 @@
 /test-reports/
 junit.xml
 /coverage/
+permissions-backup.acl
 /.mergify.yml
 /test/
+/tsconfig.dev.json
 /src/
 !/lib/
 !/lib/**/*.js
@@ -16,10 +18,10 @@ dist
 /.idea/
 /.projenrc.js
 tsconfig.tsbuildinfo
-/tsconfig.jest.json
 /.eslintrc.json
-/tsconfig.eslint.json
+!/assets/
 cdk.out/
 .cdk.staging/
 cdk.context.json
 yarn-error.log
+.history
