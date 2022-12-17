@@ -1,9 +1,10 @@
 import * as path from 'path';
 
-import { LambdaRestApi } from '@aws-cdk/aws-apigateway';
-import { SubnetType, Vpc } from '@aws-cdk/aws-ec2';
-import { Code, Runtime, Tracing, Function } from '@aws-cdk/aws-lambda';
-import { App, Construct, Stack, StackProps } from '@aws-cdk/core';
+import { App, Stack, StackProps } from 'aws-cdk-lib';
+import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
+import { IpAddresses, SubnetType, Vpc } from 'aws-cdk-lib/aws-ec2';
+import { Code, Function, Runtime, Tracing } from 'aws-cdk-lib/aws-lambda';
+import { Construct } from 'constructs';
 
 
 export class HelloWorldLambdaStack extends Stack {
@@ -11,7 +12,7 @@ export class HelloWorldLambdaStack extends Stack {
     super(scope, id, props);
 
     const vpc = new Vpc(this, 'VPC', {
-      cidr: '10.0.0.0/21',
+      ipAddresses: IpAddresses.cidr('10.0.0.0/21'),
       maxAzs: 3,
     });
 
@@ -22,7 +23,7 @@ export class HelloWorldLambdaStack extends Stack {
       code: Code.fromAsset(path.join(__dirname, '../function/hello-world')),
       vpc: vpc,
       vpcSubnets: {
-        subnetType: SubnetType.PRIVATE,
+        subnetType: SubnetType.PRIVATE_WITH_EGRESS,
       },
     });
     new LambdaRestApi(this, 'RestApi', {

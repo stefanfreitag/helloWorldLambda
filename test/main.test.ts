@@ -1,17 +1,14 @@
-import { expect as expectCDK, haveResourceLike } from '@aws-cdk/assert';
-import { App } from '@aws-cdk/core';
+import { App } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 
 import { HelloWorldLambdaStack } from '../src/main';
 test('Stack contains deploy stage', () => {
   const app = new App();
   // WHEN
   const stack = new HelloWorldLambdaStack(app, 'MyTestStack');
-  // THEN
-  expectCDK(stack).to(
-
-    haveResourceLike('AWS::ApiGateway::Stage', {
-      StageName: 'prod',
-    }),
-
+  const template = Template.fromStack(stack);
+  template.hasResourceProperties('AWS::ApiGateway::Stage', {
+    StageName: 'prod',
+  },
   );
 });
