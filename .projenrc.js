@@ -1,16 +1,19 @@
 const { awscdk } = require('projen');
 const { Stability } = require('projen/lib/cdk');
+const { UpgradeDependenciesSchedule } = require('projen/lib/javascript');
 
 const project = new awscdk.AwsCdkTypeScriptApp({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan.freitag@udo.edu',
-  cdkVersion: '2.55.0',
+  cdkVersion: '2.56.0',
   name: 'hello-world-lambda',
   description: 'A simple Hello World application using an AWS API Gateway and Lambda function.',
   repository: 'https://github.com/stefanfreitag/helloWorldLambda.git',
   keywords: ['aws', 'cdk', 'lambda', 'apigateway'],
-  dependabotOptions: {
-    scheduleInterval: 'monthly',
+  depsUpgradeOptions: {
+    workflowOptions: {
+      schedule: UpgradeDependenciesSchedule.WEEKLY,
+    },
   },
   defaultReleaseBranch: 'master',
   stability: Stability.STABLE,
