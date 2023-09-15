@@ -5,14 +5,14 @@ const { UpgradeDependenciesSchedule } = require('projen/lib/javascript');
 const project = new awscdk.AwsCdkTypeScriptApp({
   authorName: 'Stefan Freitag',
   authorEmail: 'stefan.freitag@udo.edu',
-  cdkVersion: '2.56.0',
+  cdkVersion: '2.96.1',
   name: 'hello-world-lambda',
   description: 'A simple Hello World application using an AWS API Gateway and Lambda function.',
   repository: 'https://github.com/stefanfreitag/helloWorldLambda.git',
   keywords: ['aws', 'cdk', 'lambda', 'apigateway'],
   depsUpgradeOptions: {
     workflowOptions: {
-      schedule: UpgradeDependenciesSchedule.WEEKLY,
+      schedule: UpgradeDependenciesSchedule.MONTHLY,
     },
   },
   defaultReleaseBranch: 'master',
@@ -20,6 +20,7 @@ const project = new awscdk.AwsCdkTypeScriptApp({
   cdkVersionPinning: true,
   copyrightPeriod: 2020,
   copyrightOwner: 'Stefan Freitag',
+  typescriptVersion: '4.3.5',
 });
 
 
