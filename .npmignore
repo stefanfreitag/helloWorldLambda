@@ -16,7 +16,6 @@ dist
 /.github/
 /.vscode/
 /.idea/
-/.projenrc.js
 tsconfig.tsbuildinfo
 /.eslintrc.json
 !/assets/
@@ -26,3 +25,4 @@ cdk.context.json
 yarn-error.log
 .history
 /.gitattributes
+/.projenrc.js
